@@ -1,0 +1,35 @@
+-- 1. Find the title of each film
+
+  SELECT Title FROM movies;
+
+-- 2. Find the director of each film
+
+   SELECT Director FROM movies;
+
+-- 3. Find the title and director of each film
+
+  SELECT Title, Director FROM movies;
+
+-- 4. Find the title and year of each film
+
+  SELECT Title, Year FROM movies;
+
+-- 5. Find all the information about each film
+
+  SELECT * FROM movies;
+
+-- 6. Find the movie with a row id of 6
+
+  SELECT Title FROM movies where ID = 6;
+
+-- 7. Find the movies released in the years between 2000 and 2010
+
+  SELECT Title FROM movies where Year Between '2000' and '2010';
+
+-- 8. Find the movies not released in the years between 2000 and 2010
+
+  SELECT Title FROM movies where Year not Between '2000' and '2010';
+
+-- 9. Find the first 5 Pixar movies and their release year
+
+SELECT Title, Year FROM movies where ID in (1,2,3,4,5);
