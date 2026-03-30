@@ -6,7 +6,7 @@ USE company2cse2;
 SELECT ENAME
   FROM employee
   WHERE
-  SAL > ANY (SELECT SAL FROM employee )
+  SAL > ANY (SELECT SAL FROM employee WHERE DEPTNO <> 10  )
   AND 
   DEPTNO = 10; 
   
@@ -15,7 +15,7 @@ SELECT ENAME
 SELECT ENAME
   FROM employee
   WHERE
-  SAL > ALL (SELECT SAL FROM employee )
+  SAL > ALL (SELECT SAL FROM employee WHERE DEPTNO <> 10  )
   AND 
   DEPTNO = 10; 
   
